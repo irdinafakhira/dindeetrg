@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinde Japanese Restaurant</title>
+  <link rel="stylesheet" href="1styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yuji Boku">
+</head>
+
+<style>
+	body, html {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	}
+	
+
+	header {
+  background-color: #d50000;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+nav {
+  margin-bottom: 30px 0;
+  padding: 18px 0;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  text-align: right;
+background-color: #d50000;
+
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  margin-left: auto;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffe6e6;
+  text-decoration: underline;
+}
+	.logo {
+    position: absolute;
+    top: 10px; 
+    left: 20px;
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    z-index: 1001; 
+	}
+  
+
+  /* Footer Section */
+  footer {
+  background-color: #d50000;
+  color: white;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+    align-items: center;
+}
+
+        .footer-section {
+            flex: 1;
+            min-width: 50px;
+            margin: 5px;
+            gap: 10px;
+        }
+
+        .footer-section p {
+            margin-top: 10px;
+      color: white;
+        }
+
+.footer-logo img {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    z-index: 1001; 
+    height: 100px;
+    margin-left: -10px;
+ 
+}
+
+        .footer-links {
+      margin-left: -100px;
+            display: flex;
+            flex-wrap: wrap;
+      gap: 3px;
+            margin-bottom: -50px;
+      padding: 30px;
+        }
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold
+  ;
+}
+  
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            display: flex;
+            justify-content: flex-end;  
+            align-items: center;        
+            padding: 20px;
+      gap: 10px;
+        }
+
+        .footer-icons {
+            display: flex;
+            align-items: center; 
+            margin-right: 100px;       
+        }
+
+        .footer-icons a {
+            color: white;
+            font-size: 24px;
+            margin-right: 0.5px;
+            padding: 9px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-icons a:hover {
+            color: #333;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 10px;
+            flex-basis: 100%;
+        }
+      
+
+ </style>
+
+<body>
+
+        <img src="img/logo dinde.jpg" alt="Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+		      	<a href="MENU.html">Menu</a>
+            <a href="ABOUT.html">About</a>
+            <a href="CONTACT.html">Contact</a>
+        </nav>
+
+
+
+<div class="contact-container">
+  <section id="contact">
+    <div class="contact-content">
+      
+  
+<div class="left-side">
+  <img src="img/post1.jpg" alt="Image 1">
+</div>
+
+      
+      <div class="right-side">
+        <form action="/action_page.php">
+          <input type="text" id="email" name="email" placeholder="Email" required>
+          <input type="text" id="phone" name="phone" placeholder="Phone" required>
+          
+          <input type="text" id="name" name="name" placeholder="Name" required>
+          <textarea id="message" name="message" placeholder="Write your message.." required style="height:200px"></textarea>
+          
+          <input type="submit" value="Submit" class="submit-button">
+        </form>
+      </div>
+      
+    </div>
+  </section>
+</div>
+
+
+
+<div class="contact-section">
+ 
+  <div class="row">
+    <div class="location-container">
+      <p><strong>No. Phone (Dinde):</strong></p>
+      <p>012-205 2230</p>
+    </div>
+
+
+    <div class="location-container">
+      <p><strong>Email (Dinde):</strong></p>
+      <p>info@dinde.com</p>
+    </div>
+  </div>
+
+
+  <div class="loc-container">
+    <p><strong>Location (Dinde):</strong></p>
+    <p>Jalan Sultan Omar, ICON RESIDENCE, 20300 Kuala Terengganu, Terengganu</p>
+    <p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.6213757628357!2d103.13942687498343!3d5.321607394656864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7bfe8af995cc7%3A0xdf7b4ca6af685652!2sDinde%20Japanese%20Restaurant!5e0!3m2!1sen!2smy!4v1736961877501!5m2!1sen!2smy"
+        width="600"
+        height="450"
+        style="border:0; border-radius: 15px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </p>
+  </div>
+</div>
+
+
+
+
+   <!-- Footer -->
+    <footer>
+        <div class="footer-section footer-logo">
+            <img src="img/logo dinde.jpg" alt="Logo">
+		</div>
+		<div>
+      <div class="footer-links">
+        <a href="index.html">Home |</a>
+        <a href="MENU.html">Menu |</a>
+        <a href="ABOUT.html">About |</a>
+        <a href="CONTACT.html">Contact</a>
+      </div>
+		</div>
+        </div>
+        <div class="footer-section">
+            <strong>ADDRESS</strong>
+            <p>Icon Residence - Jalan Sultan Omar,<br>Kuala Terengganu, Terengganu</p>
+        </div>
+        <div class="footer-section">
+            <strong>OPENING HOURS</strong>
+            <p>Sat - Thurs: 12pm - 10pm<br>Fri: Closed</p>
+        </div>
+        <div class="footer-section">
+            <strong>FOLLOW</strong>
+            <div class="footer-icons">
+                <a href="https://www.tiktok.com/@dinde.trg?_t=ZS-8t3McvPNYDi&_r=1" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/dinde.trg?igsh=MW93bmNzend4MHR0ZQ%3D%3D&utm_source=qr" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">©2024 Dinde Japanese Restaurant</div>
+    </footer>
+</body>
+</html>
+
+

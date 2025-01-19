@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinde Japanese Restaurant</title>
+  <link rel="stylesheet" href="1styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yuji Boku">
+  <style>
+       
+body, html {
+  margin: auto;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #d50000;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+nav {
+  margin-bottom: 30px 0;
+  padding: 18px 0;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  text-align: right;
+background-color: #d50000;
+
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  margin-left: auto;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffe6e6;
+  text-decoration: underline;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Background Section */
+.background2 {
+    width:98%;
+    background-image: url('img/wall4.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Gallery Section */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer Section */
+footer {
+  background-color: #d50000;
+  color: white;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+    align-items: center;
+}
+
+        .footer-section {
+            flex: 1;
+            min-width: 50px;
+            margin: 5px;
+            gap: 10px;
+        }
+
+        .footer-section p {
+            margin-top: 10px;
+      color: white;
+        }
+
+.footer-logo img {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    z-index: 1001; 
+    height: 100px;
+    margin-left: -10px;
+ 
+}
+
+        .footer-links {
+      margin-left: -100px;
+            display: flex;
+            flex-wrap: wrap;
+      gap: 3px;
+            margin-bottom: -50px;
+      padding: 30px;
+        }
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold
+  ;
+}
+  
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            display: flex;
+            justify-content: flex-end;  
+            align-items: center;        
+            padding: 20px;
+      gap: 10px;
+        }
+
+        .footer-icons {
+            display: flex;
+            align-items: center; 
+            margin-right: 100px;       
+        }
+
+        .footer-icons a {
+            color: white;
+            font-size: 24px;
+            margin-right: 0.5px;
+            padding: 9px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-icons a:hover {
+            color: #333;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 10px;
+            flex-basis: 100%;
+        }
+      
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header nav {
+        display: none; /* Hide nav for smaller screens */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #d50000;
+    }
+
+    header nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .background2 {
+        padding: 50px 10px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+ 
+.about-right h1,
+.about-right h2 {
+  text-align: left; 
+  margin: 0px;  
+}
+
+.video,
+	.about-video {
+	width: 300px;
+	height: auto;
+	border-radius: 5px;
+	margin-right: 100px;
+	margin-bottom: -800px;
+	}
+
+ .about-right h1{
+  font-family: 'Yuji Boku';
+  font-size: 90px;
+  text-align: center;
+  
+  margin-left: -250px;
+}
+
+.about-right h2 {
+  font-family: 'Yuji Boku';
+  font-size: 30px;'
+  margin-left: 400px;
+
+}
+
+
+.about-left p {
+    max-width: 550px; 
+    margin: 20px auto; 
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: justify;
+	}
+
+    @media (max-width: 768px) {
+    .about-left {
+        padding: 10px;
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .about-left {
+        font-size: 13px;
+        line-height: 1.4; /* Slightly tighter line spacing on very small screens */
+        padding: 5px;
+    }
+}
+	
+	
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-image: url('img/main.jpg');
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+
+.box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;                      
+    min-width: 10px;              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+
+
+  </style>
+  </head>
+<body>
+
+        <img src="img/logo dinde.jpg" alt="Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="MENU.html">Menu</a>
+            <a href="ABOUT.html">About</a>
+            <a href="CONTACT.html">Contact</a>
+        </nav>
+
+	
+ <section>
+	<section class="background2">
+		<div class="about-section">
+		<div class="about-right">
+			<div class="title">
+				<h1>DINDE</h1>
+                <h2 class="about-title">
+				<h2>Japanese Restaurant</h2>
+                </h2>
+			</div>
+
+			<div class="about-left">
+				<p>Welcome to Dinde, an authentic Japanese dining experience located in the heart of Terengganu. Our restaurant is dedicated to bringing you the finest flavors of Japan, with a focus on traditional dishes, fresh ingredients, and warm hospitality. Whether you're a long-time lover of Japanese cuisine or new to its offerings, Dinde promises to deliver a memorable dining experience that caters to all your senses. At Dinde, we believe in the beauty of simplicity. Inspired by the art of Japanese cooking, we meticulously craft each dish to ensure it embodies both authenticity and innovation. From our signature sushi rolls to flavorful ramen bowls, each item on our menu is made with the highest quality ingredients, carefully selected to reflect the true essence of Japanese culinary traditions. Our restaurant is designed to immerse you in the serene ambiance of Japan. With our minimalist decor, soothing colors, and attentiveservice, we aim to create a peaceful and welcoming atmosphere for all our guests. Whether you're dining with family, friends, or colleagues, Dinde is the perfect place to enjoy a taste of Japan in Terengganu. Come experience the culture, flavor, and tradition of Japan at Dinde where every meal is an opportunity to celebrate the art of Japanese cuisine.</p>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>	
+    </section>
+
+	
+	
+<section class="gallery-container">
+    <div class="box">
+        <h1>Vision</h1>
+        <h2>ビジョン</h2>
+        <p>To be the top choice for authentic Japanese cuisine in Kuala Terengganu, offering a unique and enjoyable dining experience that brings the true taste of Japan to the local community.</p>
+    </div>
+<div class="box">
+    <h1>Mission</h1>
+    <h2>ミッション</h2>
+    <ul>
+        <li>To serve high-quality, authentic Japanese dishes with fresh ingredients.</li>
+        <li>To create a warm, welcoming atmosphere for all customers.</li>
+        <li>To provide excellent service and a memorable dining experience.</li>
+        <li>To introduce the flavors of Japan to the local community.</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h1>Objectives</h1>
+    <h2>目的</h2>
+    <ul>
+        <li>To provide authentic and high-quality Japanese cuisine to the local community and visitors in Kuala Terengganu.</li>
+        <li>To offer a diverse menu that showcases traditional Japanese dishes, including sushi, ramen, don, and shabu shabu, catering to different tastes and preferences.</li>
+        <li>To create a warm, inviting atmosphere that encourages guests to enjoy a relaxed and memorable dining experience.</li>
+        <li>To maintain excellent customer service, ensuring each guest feels valued and satisfied with their meal.</li>
+    </ul>
+</div>
+</div>
+</section>
+
+
+<section id="gallery">
+
+    <div class="gallery-container">
+  
+ 
+        <div class="gallery-item tall">
+            <img src="img/post1.jpg" alt="Image 1" class="gallery-image">
+        </div>
+
+	
+        <div class="gallery-item tall">
+            <img src="img/post2.jpg" alt="Image 2" class="gallery-image">
+        </div>
+	
+	
+        <div class="gallery-item tall">
+            <img src="img/post4.jpg" alt="Image 3" class="gallery-image">    
+        </div>
+
+	
+        <div class="gallery-item tall">
+            <img src="img/post3.jpg" alt="Image 4" class="gallery-image">    
+        </div>  
+		
+		        <div class="gallery-item tall">
+            <img src="img/post7.jpg" alt="Image 4" class="gallery-image">    
+        </div> 
+		
+		        <div class="gallery-item tall">
+            <img src="img/post10.jpg" alt="Image 4" class="gallery-image">    
+        </div> 
+		
+		        <div class="gallery-item tall">
+            <img src="img/post8.jpg" alt="Image 4" class="gallery-image">    
+        </div> 
+		
+		        <div class="gallery-item tall">
+            <img src="img/post12.jpg" alt="Image 4" class="gallery-image">    
+        </div> 
+</div>
+</section>
+
+  
+   <!-- Footer -->
+    <footer>
+        <div class="footer-section footer-logo">
+            <img src="img/logo dinde.jpg" alt="Logo">
+		</div>
+		<div>
+            <div class="footer-links">
+                <a href="index.html">Home |</a>
+                <a href="MENU.html">Menu |</a>
+                <a href="ABOUT.html">About |</a>
+                <a href="CONTACT.html">Contact</a>
+            </div>
+		</div>
+        </div>
+        <div class="footer-section">
+            <strong>ADDRESS</strong>
+            <p>Icon Residence - Jalan Sultan Omar,<br>Kuala Terengganu, Terengganu</p>
+        </div>
+        <div class="footer-section">
+            <strong>OPENING HOURS</strong>
+            <p>Sat - Thurs: 12pm - 10pm<br>Fri: Closed</p>
+        </div>
+        <div class="footer-section">
+            <strong>FOLLOW</strong>
+            <div class="footer-icons">
+                <a href="https://www.tiktok.com/@dinde.trg?_t=ZS-8t3McvPNYDi&_r=1" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/dinde.trg?igsh=MW93bmNzend4MHR0ZQ%3D%3D&utm_source=qr" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">©2024 Dinde Japanese Restaurant</div>
+    </footer>
+</body>
+</html>

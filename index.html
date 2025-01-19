@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dinde Japanese Restaurant</title>
+	<link rel="stylesheet" href="1styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yuji Boku">
+	<style>
+	 * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #d50000;
+            color: white;
+            padding: 30px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header .logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        nav {
+            margin-bottom: 30px 0;
+            padding: 18px 0;
+            position: sticky;
+            top: 0px;
+            z-index: 999;
+            text-align: right;
+			background-color: #d50000;
+			
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe6e6;
+			text-decoration: underline;
+        }
+		
+	.logo {
+    position: absolute;
+    top: 10px; 
+    left: 20px;
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    z-index: 1001; 
+	}
+	
+
+	.background1 {
+    padding: 20px;
+    width: 100%;
+	height: 500px;
+    background: url('img/1main.jpg') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    gap: 80px; /* Moved gap after flex properties for clarity */
+}
+
+
+	.background1 h1, 
+	.background1 h3, 
+	.background1 p, 	
+	.background1 button {
+	text-align: left; 
+	margin-left: -300px;
+	}
+		
+	.background1 h1 {
+            font-size: 80px;
+            margin-bottom: 20px;
+			text-align: center;
+			font-family: 'Yuji Boku';
+        }
+	
+	.background1 h3 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: black;
+	text-align: right;
+	}
+
+	.background1 p {
+	font-family: 'Yuji Boku';
+	font-size: 1.5rem;
+	text-align: center;
+	
+	color: black;
+	}
+
+	.background1 button {
+            background-color: #d91616;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .background1 button:hover {
+            background-color: #a91313;
+        }
+
+
+		.about-section {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        padding: 20px;
+		width: 101%;
+            gap: 20px;
+            background: url('img/wall2.jpg') center/cover no-repeat;
+        }
+
+        .about-left {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-left video {
+            max-width: 50%;
+            border-radius: 5px;
+			display: center;
+        }
+
+        .about-right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .about-right h1 {
+            font-size: 2.5rem;
+            color: #d00000;
+            margin-bottom: 20px;
+			text-align: right;
+			padding: 10%;
+        }
+
+        .about-right p {
+            line-height: 1.5;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .more-button {
+            display: inline-block;
+            background-color: #d91616;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .more-button:hover {
+            background-color: #a91313;
+        }
+
+	.menu-section {
+	background-image: url('img/wall3.jpg'); 
+	background-size: cover; 
+	background-position: center; 
+	background-repeat: no-repeat; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 50px;
+	}
+
+	.menu-item {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	text-align: center;
+	padding: 20px;
+	width: 250px;
+	position: relative;
+	}
+
+	.new-label {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: black;
+	color: white;
+	padding: 5px 10px;
+	font-size: 12px;
+	border-radius: 5px;
+	}
+
+	.menu-image {
+    border-radius: 50%; 
+    width: 100%; 
+    max-width: 230px; 
+    height: auto; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
+}
+
+	h3 {
+	font-size: 18px;
+	margin: 10px 0;
+	}
+
+	p {
+	font-size: 14px;
+	color: #555;
+	margin: 10px 0;
+	}
+
+	.price-rating {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 16px;
+	}
+
+	.price {
+	color: #333;
+	font-weight: bold;
+	}
+
+	.rating {
+	color: gold;
+	font-weight: bold;
+	}
+
+	
+	
+	/* Footer Section */
+	footer {
+  background-color: #d50000;
+  color: white;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+    align-items: center;
+}
+
+        .footer-section {
+            flex: 1;
+            min-width: 50px;
+            margin: 5px;
+            gap: 10px;
+        }
+
+        .footer-section p {
+            margin-top: 10px;
+      color: white;
+        }
+
+.footer-logo img {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    z-index: 1001; 
+    height: 100px;
+    margin-left: -10px;
+ 
+}
+
+        .footer-links {
+      margin-left: -100px;
+            display: flex;
+            flex-wrap: wrap;
+      gap: 3px;
+            margin-bottom: -50px;
+      padding: 30px;
+        }
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold
+  ;
+}
+  
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            display: flex;
+            justify-content: flex-end;  
+            align-items: center;        
+            padding: 20px;
+      gap: 10px;
+        }
+
+        .footer-icons {
+            display: flex;
+            align-items: center; 
+            margin-right: 100px;       
+        }
+
+        .footer-icons a {
+            color: white;
+            font-size: 24px;
+            margin-right: 0.5px;
+            padding: 9px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-icons a:hover {
+            color: #333;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 10px;
+            flex-basis: 100%;
+        }
+      
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header nav {
+        display: none; /* Hide nav for smaller screens */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #d50000;
+    }
+
+    header nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .background2 {
+        padding: 50px 10px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+		
+	 /* Responsive Design */
+	 @media screen and (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            header nav {
+                flex-direction: column;
+                display: none;
+            }
+
+            .menu-section {
+                flex-direction: column;
+            }
+
+            .menu-item {
+                width: 90%;
+            }
+		}
+        
+audio {
+  position: relative;
+  padding: 10%;
+  justify-items: left;
+  right: 0px;
+  bottom: 5;
+  min-width: 10%;
+  min-height: 10%;
+  margin: 10px auto;
+  border-radius: 50px;
+  
+  color: pink;
+  transition: transform 0.3s ease-in-out;
+
+}
+	</style>
+</head>
+<body>
+
+	<img src="img/logo dinde.jpg" alt="Logo" class="logo">
+		<nav>
+            <a href="index.html">Home</a>
+			<a href="MENU.html">Menu</a>
+            <a href="ABOUT.html">About</a>
+            <a href="CONTACT.html">Contact</a>
+        </nav>
+
+
+<section>
+	<div class="background1">
+		
+		<div class="content">
+			<h3>A Taste of Japan in Every Bite</h3>
+			<h1>DINDE</h1>
+			<p>Japanese Restaurant</p>
+			<a href="MENU.html">
+				<button>View Menu</button>
+			</a>
+		</div>
+	</div>
+	</section>
+
+	
+<section>
+	<div class="about-section">
+	  <div class="about-left">
+		<div class="video-container">
+			<video autoplay loop muted class="video">
+			  <source src="video/video.mp4" type="video/mp4">
+			</video>
+		</div>
+		</div>
+		<div class="about-right">
+			<h1 class="about-title">
+			<h1>About Us / 私たちについて</h1>
+			</h1>
+			<p>Dinde Japanese Restaurant is a must-visit for those who love authentic Japanese cuisine. Our menu features a variety of traditional dishes, from fresh sushi to flavorful ramen and also shabu shabu, all made with the finest ingredients. The cozy and welcoming atmosphere makes it perfect for both casual meals and special occasions. Experience the true taste of Japan at Dinde Japanese Restaurant and enjoy a memorable culinary journey.</p>
+			<a href="ABOUT.html">
+				<button class="more-button">More</button>
+			</a>
+		</div>
+	</div>
+</section>
+
+  
+
+<div class="menu-section">
+		<div class="menu-item">
+			  <span class="new-label">New</span>
+			  <img src="img/NEW01.jpg" alt="Ramen" class="menu-image">
+			  <h3>Ramen Carbonara</h3>
+			  <p>Our fusion take on creamy carbonara with Japanese ramen </p>
+			  <p>features crispy karaage chicken, mushrooms, </p>
+			  <p>and a touch of crispy chili.</p>
+			<div class="price-rating">
+				<span class="price">RM 24.00</span>
+				<span class="rating">6 ★</span>
+			</div>
+		</div>
+		
+    <div class="menu-item">
+		<span class="new-label">New</span>
+			  <img src="img/NEW1.jpg" alt="Beef Ramen" class="menu-image">
+			  <h3>Cream Caremel Pudding</h3>
+			  <p>Classic dessert made from creamy caramelized sugar </p>
+			  <p>and smooth custard.</p>
+		<div class="price-rating">
+				<span class="price">RM 10.00</span>
+				<span class="rating">7 ★</span>
+		</div>
+    </div>
+	
+    <div class="menu-item">
+		<span class="new-label">New</span>
+			  <img src="img/NEW2.jpg" alt="Beef Ramen" class="menu-image">
+			  <h3>Brownies Vanilla Ice Cream</h3>
+			  <p>A delicious dessert combination of rich, </p>
+			  <p>fudgy brownies topped with a scoop of creamy vanilla ice cream.</p>
+		<div class="price-rating">
+				<span class="price">RM 15.00</span>
+				<span class="rating">8 ★</span>
+		</div>
+	</div>
+	
+	<div class="menu-item">
+		<span class="new-label">New</span>
+		  <img src="img/NEW3.jpg" alt="Beef Ramen" class="menu-image">
+		  <h3>Brownies Matcha Ice Cream</h3>
+		  <p>Chocolatey brownies pair perfectly with the slightly bitter </p>
+		  <p>and sweet taste of matcha, creating a harmonious blend of textures and tastes.</p>
+	  <div class="price-rating">
+			<span class="price">RM 15.00</span>
+			<span class="rating">8 ★</span>
+		  </div>
+	</div>
+</div>
+
+<section class="homepage" style="background-color:  #a50404e5">
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="IMG/news.jpg" style="width:100%">
+      <div class="text">Daily News</div>
+    </div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 4</div>
+		  <img src="img/anousement.jpg" style="width:100%">
+		  <div class="text">Anouncement</div>
+		</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 4</div>
+			  <img src="img/promotion 1.jpg" style="width:100%">
+			  <div class="text">Promotion</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 4</div>
+				<img src="img/promotion 2.jpg" style="width:100%">
+				<div class="text">Promotion</div>
+			  </div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		  </div>
+		  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+	<span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
+</body>
+</html>
+</section>
+
+<div>
+	<audio width="400" autoplay loop class="audio" controls>
+		<source src="video/Japanese Instrumental Song.m4a" type="audio/mpeg">
+		Your browser does not support the audio element.
+	  </audio>
+	  
+
+
+
+	<footer>
+	  <div class="footer-section footer-logo">
+		<img src="img/logo dinde.jpg" alt="Logo" style="width:100px;">
+	  </div>
+	  <div>
+		<div class="footer-links">
+			<a href="index.html">Home |</a>
+			<a href="MENU.html">Menu |</a>
+			<a href="ABOUT.html">About |</a>
+			<a href="CONTACT.html">Contact</a>
+		  </div>
+	  </div>
+	  <div class="footer-section">
+		<strong>ADDRESS</strong>
+		<p>Icon Residence - Jalan Sultan Omar,<br>Kuala Terengganu, Terengganu</p>
+	  </div>
+	  <div class="footer-section">
+		<strong>OPENING HOURS</strong>
+		<p>Sat - Thurs: 12pm - 10pm<br>Fri: Closed</p>
+	  </div>
+	  <div class="footer-section">
+		<strong>FOLLOW</strong>
+		<div class="footer-icons">
+		  <a href="https://www.tiktok.com/@dinde.trg?_t=ZS-8t3McvPNYDi&_r=1" target="_blank" title="TikTok">
+			<i class="fab fa-tiktok"></i>
+		  </a>
+		  <a href="https://www.instagram.com/dinde.trg?igsh=MW93bmNzend4MHR0ZQ%3D%3D&utm_source=qr" target="_blank" title="Instagram">
+			<i class="fab fa-instagram"></i>
+		  </a>
+		</div>
+	  </div>
+	  <div class="footer-bottom">©2024 Dinde Japanese Restaurant</div>
+	</footer>
+  
+	
+  </body>
+  </html>
